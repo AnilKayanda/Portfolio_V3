@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/e1fdcb0310.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Siyah Minimalist Metin Logo.png">
+</head>
+
+<body>
+
+    <header>
+        <img id="logo" src="img/Siyah Minimalist Metin Logo.png">
+        <i class="fa-solid fa-bars" id="menuIcon"></i>
+        <nav>
+            <ul class=" nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <a id="cta" href="contact.html"><button id="cta">Contact Me</button></a>
+    </header>
+
+    <section>
+        <div class="img">
+            <img src="img/about.jpg" alt="">
+        </div>
+        <h1>Who Am I ?</h1>
+        <button class="button" onclick="scrollToPosition()">
+            Click Me
+        </button>
+    </section>
+
+    <div id="container">
+        <div class="img"><img src="img/me.png" alt=""></div>
+        <p id="name">
+            Hi, I'm Anıl. I was born on June 10, 2004, in İzmir. After completing my high school education at 85th
+            Year Anatolian High School, I decided to pursue a degree in Computer Programming at Uşak University due to
+            my keen interest in the future of technology. I chose to become a programmer as I believe the future lies in
+            technology. Growing up alongside computers since the age of 4, I formatted my computer at the age of 12 and
+            began making hardware changes at the age of 13.</br></br>
+
+            During my studies, I learned various programming languages and started to develop myself in areas where I
+            felt proficient. In my free time, I researched and learned languages related to my interests, striving to
+            enhance my skills. I worked on various projects to improve myself.
+            </br></br>
+
+            Currently, I work as a Junior Developer, and I am dedicated to continuous self-improvement every day.
+            Conducting research on technology and working on new projects motivates me. I aim to be a successful and
+            well-equipped developer in the future.</p>
+
+    </div>
+
+    <div id="box">
+        <h2>The Technologies I use</h2>
+    </div>
+    <div id="boxs">
+        <div class="lngs">
+            <div class="img"><img src="img/html.png" alt=""></div>
+            <p>HTML5</p>
+        </div>
+        <div class="lngs">
+            <div class="img"><img src="img/css.jpeg" alt=""></div>
+            <p>CSS</p>
+        </div>
+        <div class="lngs">
+            <div class="img"><img src="img/mysql.png" alt=""></div>
+            <p>MySQL</p>
+        </div>
+        <div class="lngs">
+            <div class="img"><img src="img/java.png" alt=""></div>
+            <p>JAVA</p>
+        </div>
+        <div class="lngs">
+            <div class="img"><img src="img/php.png" alt=""></div>
+            <p>PHP</p>
+        </div>
+
+        <div class="lngs">
+            <div class="img"><img src="img/js.png" alt=""></div>
+            <p>JavaScript</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Anıl Kayanda</h3>
+            <p>At the intersection of art and creativity, we craft unique designs just for you. Explore our successes
+                and let's bring projects to life together!</p>
+            <ul class="socials">
+                <li><a target="_blank" href="https://www.instagram.com/anilkayanda/">
+                        <i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href="mailto:anilkayanda@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></a></i></li>
+                <li><a target="_blank" href="https://github.com/AnilKayanda"><i class="fa-brands fa-github"></a></i>
+                </li>
+                <li><a target="_blank" href="https://twitter.com/anilkayanda"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 designed by <span>Anıl Kayanda</span></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        function scrollToPosition() {
+            // Belirli bir etikete atlamak
+            var targetElement = document.getElementById('name');
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuIcon = document.getElementById('menuIcon');
+            var navLinks = document.querySelector('.nav_links');
+
+            menuIcon.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
